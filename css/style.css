@@ -103,6 +103,53 @@ body {
   font-size: 0.9rem;
 }
 
+/* Sezione RICERCA */
+#left-side .search-user {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #eaeaea;
+}
+
+#left-side .search-user .search-icon-div {
+  width: 80px;
+  height: 35px;
+  color: lightgrey;
+  background-color: #fff;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-right: 0;
+}
+
+#left-side .search-user input {
+  width: calc(100% - 80px);
+  height: 35px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+/* Sezione CONTATTI */
+#left-side .contacts-list {
+  width: 100%;
+  height: calc(100% - 215px);
+  background-color: #fff;
+}
+
+#left-side .contacts-list .contact {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 10px 10px 10px 20px;
+  border-bottom: #eaeaea;
+}
+
+.contact-active {
+  background-color: #eaeaea;
+}
+
 /* Lato destro */
 #right-side {
   width: 65%;

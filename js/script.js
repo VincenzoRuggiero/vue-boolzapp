@@ -1,4 +1,4 @@
-const { createApp } = vue;
+const { createApp } = Vue;
 
 createApp({
   data() {
@@ -166,6 +166,7 @@ createApp({
           ],
         },
       ],
+      selectedContact: 0,
     };
   },
 }).mount("#app");
