@@ -37,6 +37,7 @@ body {
   background-color: chocolate;
 }
 
+/* Sezione UTENTE */
 #left-side .user-navbar {
   display: flex;
   justify-content: space-between;
@@ -71,6 +72,35 @@ body {
 
 #left-side .user-navbar .navbar-right i {
   margin-left: 0.5rem;
+}
+
+/* Sezione NOTIFICHE */
+#left-side .notifications {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 15px;
+  background-color: #8edafc;
+}
+
+#left-side .notifications .bell-rounded-background {
+  background-color: #fff;
+  color: #8edafc;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 1rem;
+}
+
+#left-side .notifications-content {
+  line-height: 1.2rem;
+  color: #373737;
+}
+
+#left-side .notifications-content a {
+  color: #557698;
+  font-size: 0.9rem;
 }
 
 /* Lato destro */
