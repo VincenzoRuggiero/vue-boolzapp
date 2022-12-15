@@ -26,7 +26,6 @@ body {
   width: 85%;
   height: 95%;
   /* border: 2px solid red; */
-  background-color: rgb(222, 181, 145);
 }
 
 /* Lato sinistro */
@@ -183,9 +182,8 @@ body {
   width: 65%;
   min-width: 500px;
   height: 100%;
-  background-color: rgb(164, 46, 69);
 }
-
+/* Sezione UTENTE ATTIVO */
 #right-side .active-user-nav {
   display: flex;
   justify-content: space-between;
@@ -215,4 +213,13 @@ body {
 
 #right-side .active-user-nav .right-active-area i {
   margin-left: 0.5rem;
+}
+
+/* Sezione CHAT */
+#right-side .chat-area {
+  width: 100%;
+  height: calc(100% - 145px);
+  background-image: url("../img/mine.jpg");
+  background-position: center;
+  background-size: contain;
 }
