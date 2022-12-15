@@ -34,7 +34,6 @@ body {
   width: 35%;
   min-width: 450px;
   height: 100%;
-  background-color: chocolate;
 }
 
 /* Sezione UTENTE */
@@ -150,10 +149,70 @@ body {
   background-color: #eaeaea;
 }
 
+#left-side .contacts-list .contact .contact-left {
+  display: flex;
+  height: 100%;
+}
+
+#left-side .contacts-list .contact .contact-left img {
+  height: 100%;
+  margin-right: 20px;
+  background-color: orange;
+}
+
+#left-side .contacts-list .contact .contact-left .contact-info .contact-name {
+  font-weight: 700;
+}
+#left-side
+  .contacts-list
+  .contact
+  .contact-left
+  .contact-info
+  .last-message-written {
+  font-weight: 300;
+  color: grey;
+}
+
+#left-side .contacts-list .contact .contact-right .last-message-time {
+  font-size: 12px;
+  color: grey;
+}
+
 /* Lato destro */
 #right-side {
   width: 65%;
   min-width: 500px;
   height: 100%;
   background-color: rgb(164, 46, 69);
+}
+
+#right-side .active-user-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px 10px 10px;
+  background-color: #eaeaea;
+  border-left: 1px solid lightgrey;
+}
+
+#right-side .active-user-nav .left-active-area {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#right-side .active-user-nav .left-active-area img {
+  background-color: #458fda;
+  margin-right: 10px;
+}
+
+#right-side .active-user-nav .right-active-area {
+  font-size: 20px;
+  color: #b1b1b1;
+}
+
+#right-side .active-user-nav .right-active-area i {
+  margin-left: 0.5rem;
 }
