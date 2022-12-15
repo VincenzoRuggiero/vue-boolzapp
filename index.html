@@ -52,8 +52,8 @@
             <!-- Sezione CONTATTI -->
             <div class="contacts-list">
                 <div v-for="(contact, index) in contacts" class="contact" :class="(index == selectedContact) ? 'contact-active' : ''">
-                    <div class="contact-left">
-                        <img src="contact.avatar" alt="Immagine del contatto">
+                    <div class="contact-left" >
+                        <img :src="`./img/avatar_${index +1}.jpg`" alt="Immagine del contatto">
                         <div class="contact-info">
                             <div class="contact-name"> {{ contact.name }}</div>
                             <div class="last-message-written">Lorem ipsum dolor sit.</div>
