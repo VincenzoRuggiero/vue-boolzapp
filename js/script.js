@@ -179,7 +179,7 @@ createApp({
   computed: {
     filterContacts() {
       return this.contacts.filter((element) => {
-        return element.name.includes(this.search.toLowerCase());
+        return element.name.toLowerCase().includes(this.search.toLowerCase());
       });
     },
   },
