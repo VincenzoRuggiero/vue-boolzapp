@@ -247,6 +247,15 @@ body {
   margin-bottom: 2rem;
   border-radius: 10px;
   color: #717171;
+  position: relative;
+}
+
+#right-side .chat-area .message .message-time {
+  position: absolute;
+  bottom: 3px;
+  right: 9px;
+  font-size: 10px;
+  color: #aeaeae;
 }
 
 #right-side .chat-area .message-sent {
