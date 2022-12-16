@@ -58,8 +58,8 @@ body {
   border-radius: 50%;
 }
 
-#left-side .user-navbar .navbar-left .username {
-  font-size: 14px;
+#left-side .user-navbar .navbar-left {
+  /* font-size: 14px; */
   font-weight: 400;
 }
 
@@ -207,6 +207,11 @@ body {
   height: 100%;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+#right-side .left-active-area .active-contact-info .last-access {
+  font-size: 13px;
+  color: #979797;
 }
 
 #right-side .active-user-nav .right-active-area {
