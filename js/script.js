@@ -180,7 +180,7 @@ createApp({
     sendNewMessage: function (contact) {
       let newMessage = {
         date: "10/01/2020 15:51:00", //da sistemare
-        text: this.newText,
+        message: this.newText,
         status: "sent",
       };
 
