@@ -143,6 +143,7 @@ body {
   height: 80px;
   padding: 10px 10px 10px 20px;
   border-bottom: #eaeaea;
+  cursor: pointer;
 }
 
 .contact-active {
@@ -203,8 +204,9 @@ body {
 }
 
 #right-side .active-user-nav .left-active-area img {
-  background-color: #458fda;
+  height: 100%;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 #right-side .active-user-nav .right-active-area {

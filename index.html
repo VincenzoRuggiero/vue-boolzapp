@@ -51,7 +51,7 @@
 
             <!-- Sezione CONTATTI -->
             <div class="contacts-list">
-                <div v-for="(contact, index) in contacts" class="contact" :class="(index == selectedContact) ? 'contact-active' : ''">
+                <div v-for="(contact, index) in contacts" class="contact" :class="(index == selectedContact) ? 'contact-active' : ''" @click="setContactIndex(index)">
                     <div class="contact-left" >
                         <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="Immagine del contatto">
                         <div class="contact-info">
@@ -72,7 +72,7 @@
             <!-- Sezione UTENTE ATTIVO -->
             <div class="active-user-nav">
                 <div class="left-active-area">
-                    <img :src="" alt="Immagine utente con cui stai parlando">
+                    <img src="./img/avatar_1.jpg" alt="Immagine utente attivo">
                     <div class="active-contact-info">
                         <div class="contact-name">{{ contacts[0].name }}</div>
                         <div class="last-access">{{ contacts[0].messages[0].date }}</div>

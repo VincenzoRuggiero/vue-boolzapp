@@ -167,6 +167,13 @@ createApp({
         },
       ],
       selectedContact: 0,
+      search: "",
     };
+  },
+  methods: {
+    setContactIndex: function (position) {
+      this.selectedContact = position;
+      return this.selectedContact;
+    },
   },
 }).mount("#app");
