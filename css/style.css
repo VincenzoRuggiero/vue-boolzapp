@@ -232,7 +232,7 @@ body {
 #right-side .chat-area {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   padding-top: 3rem;
   width: 100%;
   height: calc(100% - 145px);
@@ -241,21 +241,20 @@ body {
   background-size: contain;
 }
 
-#right-side .chat-area .message-sent {
+#right-side .chat-area .message {
   width: 350px;
   padding: 15px 30px 20px 20px;
   margin-bottom: 2rem;
   border-radius: 10px;
-  background-color: #d5f9ba;
   color: #717171;
 }
 
+#right-side .chat-area .message-sent {
+  background-color: #d5f9ba;
+}
+
 #right-side .chat-area .message-receveid {
-  width: 350px;
-  padding: 15px 30px 20px 20px;
-  border-radius: 10px;
   background-color: #fff;
-  color: #717171;
 }
 
 /* Sezione NUOVO MESSAGGIO */
