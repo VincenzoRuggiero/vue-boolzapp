@@ -134,6 +134,7 @@ body {
   width: 100%;
   height: calc(100% - 215px);
   background-color: #fff;
+  overflow-y: scroll;
 }
 
 #left-side .contacts-list .contact {
@@ -156,7 +157,7 @@ body {
 #left-side .contacts-list .contact .contact-left img {
   height: 100%;
   margin-right: 20px;
-  background-color: orange;
+  border-radius: 50%;
 }
 
 #left-side .contacts-list .contact .contact-left .contact-info .contact-name {
