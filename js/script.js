@@ -176,4 +176,11 @@ createApp({
       return this.selectedContact;
     },
   },
+  computed: {
+    filterContacts() {
+      return this.contacts.filter((element) => {
+        return element.name.includes(this.search.toLowerCase());
+      });
+    },
+  },
 }).mount("#app");

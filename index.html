@@ -45,22 +45,22 @@
                 <div class="search-icon-div">
                     <i class="fas fa-search"></i>
                 </div>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
             </div>
             <!-- Fine sezione-->
 
             <!-- Sezione CONTATTI -->
             <div class="contacts-list">
-                <div v-for="(contact, index) in contacts" class="contact" :class="(index === selectedContact) ? 'contact-active' : ''" @click="setContactIndex(index)">
+                <div v-for="(contact, index) in filterContacts" class="contact" :class="(index === selectedContact) ? 'contact-active' : ''" @click="setContactIndex(index)">
                     <div class="contact-left" >
                         <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="Immagine del contatto">
                         <div class="contact-info">
                             <div class="contact-name"> {{ contact.name }}</div>
-                            <div class="last-message-written">Lorem ipsum dolor sit.</div>
+                            <div class="last-message-written">{{ contact.messages.slice(-1)[0].message }}</div>
                         </div>
                     </div>
                     <div class="contact-right">
-                        <div class="last-message-time">{{ contacts[0].messages[0].date }}</div>
+                        <div class="last-message-time">{{ contact.messages.slice(-1)[0].date }}</div>
                     </div>
                 </div>
             </div>
