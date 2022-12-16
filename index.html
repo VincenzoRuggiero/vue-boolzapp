@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Boolzapp</title>
 </head>
@@ -53,7 +53,7 @@
             <div class="contacts-list">
                 <div v-for="(contact, index) in filterContacts" class="contact" :class="(index === selectedContact) ? 'contact-active' : ''" @click="setContactIndex(index)">
                     <div class="contact-left" >
-                        <img :src="'./img/avatar' + contact.avatar + '.jpg'" alt="Immagine del contatto">
+                        <img :src="`./img/avatar_${index + 1}.jpg`" alt="Immagine del contatto">
                         <div class="contact-info">
                             <div class="contact-name"> {{ contact.name }}</div>
                             <div class="last-message-written">{{ contact.messages.slice(-1)[0].message }}</div>
@@ -72,10 +72,10 @@
             <!-- Sezione UTENTE ATTIVO -->
             <div class="active-user-nav">
                 <div class="left-active-area">
-                    <img src="./img/avatar_1.jpg" alt="Immagine utente attivo">
+                    <img :src="`./img/avatar_${selectedContact + 1}.jpg`" alt="Immagine utente attivo">
                     <div class="active-contact-info">
-                        <div class="username">{{ contacts[0].name }}</div>
-                        <div class="last-access">{{ contacts[0].messages[0].date }}</div>
+                        <div class="username">{{ filterContacts[selectedContact].name }}</div>
+                        <div class="last-access">{{ filterContacts[selectedContact].messages.slice(-1)[0].date }}</div>
                     </div>
                 </div>
                 <div class="right-active-area">
