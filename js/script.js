@@ -168,12 +168,25 @@ createApp({
       ],
       selectedContact: 0,
       search: "",
+      newText: "",
     };
   },
   methods: {
     setContactIndex: function (position) {
       this.selectedContact = position;
       return this.selectedContact;
+    },
+
+    sendNewMessage: function (contact) {
+      let newMessage = {
+        date: "10/01/2020 15:51:00", //da sistemare
+        text: this.newText,
+        status: "sent",
+      };
+
+      this.filterContacts[contact].messages.push(newMessage);
+
+      this.newText = "";
     },
   },
   computed: {

@@ -97,7 +97,7 @@
             <!-- Sezione NUOVO MESSAGGIO -->
             <div class="text-controls">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" v-model="newText" @keydown.enter="sendNewMessage(selectedContact)">
                 <i class="fas fa-microphone"></i>
             </div>
             <!-- Fine sezione -->
@@ -106,6 +106,7 @@
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.1/luxon.min.js" integrity="sha512-hZKz8wkgOcWeZanRioE6H6AC3OJspzJQyDBB5jLoZ1jIKbYDt5MwVIvU703WwE4sjvKZw9uNmmYlt29xKS27RA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
