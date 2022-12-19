@@ -190,9 +190,10 @@ createApp({
       // const dateTime = date + " " + time;
 
       const DateTime = luxon.DateTime;
+      let now = DateTime.local();
 
       let newMessage = {
-        date: DateTime.toLocaleString(DateTime.DATETIME_SHORT),
+        date: now.toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
         message: this.newText,
         status: "sent",
       };
