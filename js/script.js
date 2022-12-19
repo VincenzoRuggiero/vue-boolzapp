@@ -169,6 +169,7 @@ createApp({
       selectedContact: 0,
       search: "",
       newText: "",
+      currentMessage: null,
     };
   },
   methods: {
@@ -202,6 +203,10 @@ createApp({
 
         this.filterContacts[contact].messages.push(answerBot);
       }, 1000);
+    },
+
+    deleteMessage: function (position, messagePosition) {
+      this.filterContacts[position].messages.splice(messagePosition, 1);
     },
   },
   computed: {
