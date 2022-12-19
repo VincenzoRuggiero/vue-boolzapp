@@ -172,23 +172,13 @@ createApp({
     };
   },
   methods: {
+    //Funziona che imposta l'indice del contatto selezionato
     setContactIndex: function (position) {
       this.selectedContact = position;
       return this.selectedContact;
     },
-
+    //Funzione che crea un nuovo messaggio e lo aggiunge nell'array
     sendNewMessage: function (contact) {
-      // const today = new Date();
-      // const date =
-      //   today.getDate() +
-      //   "/" +
-      //   (today.getMonth() + 1) +
-      //   "/" +
-      //   today.getFullYear();
-      // const time =
-      //   today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      // const dateTime = date + " " + time;
-
       const DateTime = luxon.DateTime;
       let now = DateTime.local();
 
@@ -201,6 +191,17 @@ createApp({
       this.filterContacts[contact].messages.push(newMessage);
 
       this.newText = "";
+
+      //Risposta automatica
+      setTimeout(() => {
+        let answerBot = {
+          date: now.toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
+          message: "Ok!",
+          status: "receveid",
+        };
+
+        this.filterContacts[contact].messages.push(answerBot);
+      }, 1000);
     },
   },
   computed: {
