@@ -75,7 +75,7 @@
                     <img :src="`./img/avatar_${selectedContact + 1}.jpg`" alt="Immagine utente attivo">
                     <div class="active-contact-info">
                         <div class="username">{{ filterContacts[selectedContact].name }}</div>
-                        <div class="last-access">Ultimo accesso il {{ filterContacts[selectedContact].messages.slice(-1)[0].date.substring(0, 10) }} alle {{ filterContacts[selectedContact].messages.slice(-1)[0].date.substring(10, 16) }}</div>
+                        <div class="last-access">Ultimo accesso il {{ filterContacts[selectedContact].messages.slice(-1)[0].date }}</div>
                     </div>
                 </div>
                 <div class="right-active-area">
@@ -89,7 +89,7 @@
              <!-- Sezione CHAT -->
             <div class="chat-area">
                 <div class="message" v-for="(message, index) in filterContacts[selectedContact].messages" :class="(filterContacts[selectedContact].messages[index].status === 'sent') ? 'message-sent' : 'message-receveid'"> {{ filterContacts[selectedContact].messages[index].message }}
-                    <span class="message-time">{{ filterContacts[selectedContact].messages[index].date  }}</span>
+                    <span class="message-time">{{ filterContacts[selectedContact].messages[index].date }}</span>
                 </div>
             </div>
             <!-- Fine sezione -->
